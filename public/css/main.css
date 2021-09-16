@@ -1,0 +1,104 @@
+
+
+*{
+    box-sizing: border-box;
+  }
+  body{
+    height:100%;
+    background-color: rgb(184, 80, 80);
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  body{
+    height:100%;
+    background-color: rgb(182, 91, 91);
+  }
+  
+  h1{
+    font-size:1em;
+    text-align:center;
+    color: #eee;
+    letter-spacing:1px;
+    text-shadow: 1px 1px 1px rgba(223, 130, 130, 0.5);
+  }
+  .nav-container{
+    width:300px;
+    margin-top:10px;
+    box-shadow: 0 2px 2px 2px rgb(95, 21, 21);
+    transition: all 0.3s linear;
+  }
+  .nav{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+  li{
+    height:50px; 
+    position:relative;
+    background: linear-gradient(#eb7575, #da2929);
+  }
+  a {
+    border-top: 1px solid rgba(206, 86, 96, 0.1);
+    border-bottom: 1px solid rgb(184, 35, 35);
+    text-decoration:none;
+    display:block;
+    height:100%;
+    width:100%;
+    line-height:50px;
+    color:#bbb;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left:25%;
+    border-left:5px solid transparent;
+    letter-spacing:1px;
+    transition: all 0.3s linear;
+  }
+  .active a{
+    color: #B93632;
+    border-left:5px solid #B93632;
+    background-color: #1B1B1B;
+    outline:0;
+  }
+  li:not(.active):hover a{
+    color: #eee;
+    border-left: 5px solid #FCFCFC;
+    background-color: #941717;
+  }
+  span[class ^= "icon"]{
+    position:absolute;
+    left:20px;
+    font-size: 1.5em;
+    transition: all 0.3s linear;
+  }
+  
+  @media only screen and (max-width : 860px){
+    
+    .text{
+      display:none;
+    }
+    
+    .nav-container , a{
+      width: 70px;
+      
+    }
+     
+    a:hover{
+      width:200px; 
+      z-index:1;
+      border-top: 1px solid rgba(6, 52, 112, 0.1);
+      border-bottom: 1px solid rgb(36, 208, 214);
+      box-shadow: 0 0 1px 1px rgb(9, 60, 126);
+    }
+    
+    a:hover  .text {
+      display:block;
+      padding-left:30%;
+    }
+  }
+  @media only screen and (max-width : 480px){
+    .nav-container, a{ width:50px;}
+    span[class ^= "icon"]{ left:8px;}
+  }
+  
